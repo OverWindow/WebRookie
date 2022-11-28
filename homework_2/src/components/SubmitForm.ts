@@ -1,7 +1,5 @@
 import { TodoList } from "./TodoList";
 
-
-
 export function SubmitForm() :string{
   return `
   <form id="input-form" class="toto-form">
@@ -12,9 +10,9 @@ export function SubmitForm() :string{
 }
 
 export function SubmitFormScript() :void{
-  const $toto_form = document.querySelector('#input-form') as HTMLFormElement;
+  const $toto_form = document.querySelector<HTMLFormElement>('#input-form');
 
-  $toto_form.addEventListener('submit', (event:any) => {
+  $toto_form?.addEventListener('submit', (event:any) => {
     event.preventDefault();
     const content:string = event.target.input.value;
     event.target['input'].value = '';
