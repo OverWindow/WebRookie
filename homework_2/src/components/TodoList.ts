@@ -44,7 +44,7 @@ function TodoDelete(todos:any, $li :HTMLLIElement) {
         fetch("/todo")
         .then((response) => response.json())
         .then((data) => console.log("After DELETE",data))
-        .catch(()=> console.log ("error"));
+        .catch(()=> console.log ("GET error"));
     })
     .catch(error=>console.log(error));
 
@@ -73,7 +73,7 @@ function TodoCheck( check:HTMLInputElement, data:any){
         .then((data) => console.log(data))
         .catch(()=> console.log("error"));
     })
-    .catch(()=>console.log("error"));
+    .catch(()=>console.log("GET error"));
 
     return;
 }
